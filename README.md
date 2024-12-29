@@ -1,108 +1,147 @@
-# Zoho Project: Predicting Audience Rating
+# **Audience Rating Prediction Project**
 
-This project aims to build a model to predict the 'audience_rating' for movies using the Rotten Tomatoes dataset. The notebook  [Predicting_Audience_rating.ipynb](#Predicting_Audience_rating.ipynb) demonstrates the complete pipeline from data preprocessing to model evaluation.
+## **Project Overview**
+This project aims to build a machine learning model to predict the audience rating of movies based on various features such as runtime, genre, cast, and critic ratings. The pipeline demonstrates the end-to-end process, from data preprocessing to model evaluation and hyperparameter tuning, ensuring accurate predictions and robust performance.
 
 ---
-## Project Requirements
 
-- **Python Version**: 3.10.0
-- **Libraries and Versions**:
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - scikit-learn
-  - joblib
-  - tabulate
+## **Features**
+- **Data Preprocessing**:
+  - Conversion of `.xls` dataset to `.csv` for better compatibility.
+  - Handling missing values and encoding categorical variables.
+  - Splitting data into training and testing sets.
+- **Exploratory Data Analysis (EDA)**:
+  - Visualization of target variable distribution.
+  - Statistical summaries to understand data trends and outliers.
+- **Model Building**:
+  - Implementation of multiple regression models: Linear Regression, Random Forest, Decision Tree, and Support Vector Regression (SVR).
+  - Evaluation using metrics like Mean Squared Error (MSE) and R² score.
+- **Hyperparameter Tuning**:
+  - RandomizedSearchCV for optimizing model parameters.
+  - Early stopping for Random Forest to prevent overfitting.
+- **Final Pipeline**:
+  - A robust pipeline with Random Forest Regressor as the final model.
+  - StandardScaler for feature normalization.
 
-## Key Components
-
-1. **Data Handling and Manipulation**:
-   - pandas
-   - numpy
-
-2. **Data Visualization**:
-   - matplotlib
-   - seaborn
-
-3. **Machine Learning and Data Preprocessing**:
-   - scikit-learn
-
-4. **Model Persistence**:
-   - joblib
-
-5. **Formatted Output**:
-   - tabulate
-
-6. **Additional Standard Libraries**:
-   - io
-   - ast
-
-## Development Environment
-
-The project was developed using a Jupyter Notebook environment, as evidenced by the cell structure and markdown formatting in the provided code.
 ---
 
+## **Dataset**
+The dataset contains information about movies, including:
+- **Numerical Features**: `runtime_in_minutes`, `tomatometer_rating`, `tomatometer_count`, `audience_rating` (target variable).
+- **Categorical Features**: `rating`, `genre`, `directors`, `writers`, `cast`, `studio_name`, etc.
+- **Text-based Features**: `movie_info`, `critics_consensus`.
+- **Date Features**: `in_theaters_date`, `on_streaming_date`.
 
-## Table of Contents
+### Dataset Summary:
+- Total rows: 16,638
+- Target variable: `audience_rating` (float64)
+- Missing values in several columns handled during preprocessing.
 
-1. [Data Preparation](#data-preparation)
-2. [Exploratory Data Analysis](#exploratory-data-analysis)
-3. [Data Preprocessing](#data-preprocessing)
-4. [Model Building](#model-building)
-5. [Model Evaluation](#model-evaluation)
-6. [Conclusion](#conclusion)
-7. [Conclusion](#conclusion)
+---
 
+## **Steps to Run the Project**
 
-## Data Preparation
+### 1. **Setup Environment**
 
-- The original dataset is converted from .xls to .csv format for easier processing.
-- Libraries used: pandas, numpy, matplotlib, seaborn, scikit-learn, joblib, tabulate, io, ast
+Here is the complete list of import statements used in the notebook:
 
-## Exploratory Data Analysis
+```python
+# Import libraries for data handling and manipulation
+import pandas as pd  # For handling tabular data (DataFrames)
+import numpy as np  # For performing numerical operations
 
-- Basic statistical analysis of the dataset
-- Visualization of key features and their relationships with the target variable
+# Import libraries for data visualization
+import matplotlib.pyplot as plt  # For creating basic plots and graphs
+import seaborn as sns  # For creating more advanced and visually appealing plots
 
-## Data Preprocessing
+# Import libraries for data preprocessing
+from sklearn.preprocessing import StandardScaler, LabelEncoder  # For scaling data and encoding labels
 
-- Handling missing values
-- Feature engineering
-- Encoding categorical variables
-- Scaling numerical features
+# Import libraries for model building and evaluation
+from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV, cross_val_score  # For splitting data and hyperparameter tuning
+from sklearn.linear_model import LinearRegression  # For Linear Regression model
+from sklearn.tree import DecisionTreeRegressor  # For Decision Tree Regression model
+from sklearn.ensemble import RandomForestRegressor  # For Random Forest Regression model
+from sklearn.svm import SVR  # For Support Vector Regression model
 
-## Model Building
+# Import libraries for performance metrics
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score  # For evaluating model performance
 
-- Multiple regression models are built and compared:
-  - Linear Regression
-  - Decision Tree Regressor
-  - Random Forest Regressor
-  - Support Vector Regressor
-- Hyperparameter tuning using GridSearchCV and RandomizedSearchCV
+# Import library for model persistence
+import joblib  # For saving and loading models
 
-## Model Evaluation
+# Import library for formatted output in tables
+from tabulate import tabulate  # For displaying results in a formatted table
 
-- Models are evaluated using various metrics:
-  - Mean Absolute Error (MAE)
-  - Mean Squared Error (MSE)
-  - Root Mean Squared Error (RMSE)
-  - R-squared (R2) Score
-- Cross-validation is performed to ensure robustness
+# Import library for in-memory file handling
+import io  # For working with files in memory
 
-## Conclusion
+# Import library for safely evaluating strings into Python objects
+import ast  # For converting strings to Python objects (e.g., dict, list) safely
+```
 
-The Random Forest Regressor is selected as the best-performing model. The final model is saved using joblib for future use.
+These imports cover all the necessary modules and packages used throughout the notebook for data handling, visualization, preprocessing, model building, evaluation, and utility functions.
 
-To use this notebook:
+### 2. **Run the Notebook**
+Follow these steps in the Jupyter Notebook:
+1. Load the dataset (`Rotten_Tomatoes_Movies3.xls`) and convert it to `.csv`.
+2. Perform exploratory data analysis to understand the dataset.
+3. Preprocess the data by handling missing values and encoding categorical features.
+4. Train multiple models and evaluate their performance.
+5. Tune hyperparameters using RandomizedSearchCV.
 
-1. Ensure all required libraries are installed
-2. Run the cells in order
-3. Adjust hyperparameters or try different models as needed
+### 3. **Final Pipeline**
+The final pipeline uses a Random Forest Regressor with optimized hyperparameters:
+```python
+RandomForestRegressor(
+    n_estimators=150,
+    max_depth=10,
+    min_samples_split=5,
+    min_samples_leaf=4,
+    max_features='sqrt',
+    random_state=42
+)
+```
+The pipeline includes a StandardScaler for normalization.
 
-For any questions or improvements, please open an issue or submit a pull request.
+---
 
+## **Results**
 
+### Model Performance Comparison:
+| Model                  | Best MSE     | Best R²   | Notes                          |
+|------------------------|--------------|-----------|--------------------------------|
+| Linear Regression      | Moderate     | ~0.561    | Simple model; underfits data. |
+| Random Forest          | Best (low)   | ~0.601    | Best balance; slight overfit. |
+| Decision Tree          | Moderate     | ~0.507    | Overfits; lacks generalization. |
+| Support Vector Regressor (SVR) | Poor        | ~0.049    | Severe underfitting observed. |
 
-To ensure compatibility and reproducibility, it's recommended to list the exact versions of these libraries in a requirements.txt file or to use a virtual environment management tool like conda or venv.
+### Final Model Performance:
+- R² Score: ~0.601
+- MSE: Low error compared to other models.
+
+---
+
+## **Visualization**
+1. Histogram with KDE for audience rating distribution.
+2. Bar chart comparing training vs testing scores for each model.
+
+---
+
+## **Key Takeaways**
+1. The Random Forest model performed the best after hyperparameter tuning, balancing complexity and accuracy.
+2. Early stopping helped prevent overfitting in Random Forest by limiting tree depth and size.
+3. Proper preprocessing (e.g., handling missing values, encoding) significantly improved model performance.
+
+---
+
+## **Future Improvements**
+1. Explore advanced models like Gradient Boosting or XGBoost for better performance.
+2. Use feature engineering to create new predictors from existing data (e.g., text analysis on `critics_consensus`).
+3. Address potential outliers in runtime (`min=1`, `max=2000`) with domain-specific knowledge.
+
+---
+
+## **Contact**
+For questions or suggestions regarding this project, feel free to reach out!
 
