@@ -1,6 +1,6 @@
 # Zoho Project: Predicting Audience Rating
 
-This project aims to build a model to predict the 'audience_rating' for movies using the Rotten Tomatoes dataset. The notebook demonstrates[Predicting_Audience_rating.ipynb](#Predicting_Audience_rating.ipynb) the complete pipeline from data preprocessing to model evaluation.
+This project aims to build a model to predict the 'audience_rating' for movies using the Rotten Tomatoes dataset. The notebook  [Predicting_Audience_rating.ipynb](#Predicting_Audience_rating.ipynb) demonstrates the complete pipeline from data preprocessing to model evaluation.
 
 ---
 ## Project Requirements
