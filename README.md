@@ -10,7 +10,8 @@ This project aims to build a model to predict the 'audience_rating' for movies u
 4. [Model Building](#model-building)
 5. [Model Evaluation](#model-evaluation)
 6. [Conclusion](#conclusion)
-7. [Tools, Technologies, and Libraries](#Tools, Technologies, and Libraries)
+7. [Conclusion](#conclusion)
+8. [Tools, Technologies, and Libraries](#tools,-technologies,-and-libraries)
 
 ## Data Preparation
 
