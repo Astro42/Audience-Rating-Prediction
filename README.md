@@ -2,6 +2,48 @@
 
 This project aims to build a model to predict the 'audience_rating' for movies using the Rotten Tomatoes dataset. The notebook demonstrates the complete pipeline from data preprocessing to model evaluation.
 
+---
+[Project Requirements](#project-requirements)
+
+## Project Requirements
+
+- **Python Version**: 3.10.0
+- **Libraries and Versions**:
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - joblib
+  - tabulate
+
+## Key Components
+
+1. **Data Handling and Manipulation**:
+   - pandas
+   - numpy
+
+2. **Data Visualization**:
+   - matplotlib
+   - seaborn
+
+3. **Machine Learning and Data Preprocessing**:
+   - scikit-learn
+
+4. **Model Persistence**:
+   - joblib
+
+5. **Formatted Output**:
+   - tabulate
+
+6. **Additional Standard Libraries**:
+   - io
+   - ast
+
+## Development Environment
+
+The project was developed using a Jupyter Notebook environment, as evidenced by the cell structure and markdown formatting in the provided code.
+---
 ## Table of Contents
 
 1. [Data Preparation](#data-preparation)
@@ -11,7 +53,7 @@ This project aims to build a model to predict the 'audience_rating' for movies u
 5. [Model Evaluation](#model-evaluation)
 6. [Conclusion](#conclusion)
 7. [Conclusion](#conclusion)
-8. [Project Requirements](#project-requirements)
+
 
 ## Data Preparation
 
@@ -60,44 +102,7 @@ To use this notebook:
 
 For any questions or improvements, please open an issue or submit a pull request.
 
-## Project Requirements
 
-- **Python Version**: 3.10.0
-- **Libraries and Versions**:
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - scikit-learn
-  - joblib
-  - tabulate
-
-## Key Components
-
-1. **Data Handling and Manipulation**:
-   - pandas
-   - numpy
-
-2. **Data Visualization**:
-   - matplotlib
-   - seaborn
-
-3. **Machine Learning and Data Preprocessing**:
-   - scikit-learn
-
-4. **Model Persistence**:
-   - joblib
-
-5. **Formatted Output**:
-   - tabulate
-
-6. **Additional Standard Libraries**:
-   - io
-   - ast
-
-## Development Environment
-
-The project was developed using a Jupyter Notebook environment, as evidenced by the cell structure and markdown formatting in the provided code.
 
 To ensure compatibility and reproducibility, it's recommended to list the exact versions of these libraries in a requirements.txt file or to use a virtual environment management tool like conda or venv.
 
