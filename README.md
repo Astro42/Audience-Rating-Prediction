@@ -1,10 +1,8 @@
 # Zoho Project: Predicting Audience Rating
 
-This project aims to build a model to predict the 'audience_rating' for movies using the Rotten Tomatoes dataset. The notebook demonstrates the complete pipeline from data preprocessing to model evaluation.
+This project aims to build a model to predict the 'audience_rating' for movies using the Rotten Tomatoes dataset. The notebook demonstrates[Predicting_Audience_rating.ipynb](#Predicting_Audience_rating.ipynb) the complete pipeline from data preprocessing to model evaluation.
 
 ---
-[Project Requirements](#project-requirements)
-
 ## Project Requirements
 
 - **Python Version**: 3.10.0
@@ -44,6 +42,8 @@ This project aims to build a model to predict the 'audience_rating' for movies u
 
 The project was developed using a Jupyter Notebook environment, as evidenced by the cell structure and markdown formatting in the provided code.
 ---
+
+
 ## Table of Contents
 
 1. [Data Preparation](#data-preparation)
