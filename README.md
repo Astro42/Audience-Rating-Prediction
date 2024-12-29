@@ -1,8 +1,21 @@
 # **Audience Rating Prediction Project**
 
 ## **Project Overview**
-This project aims to build a machine learning model to predict the audience rating of movies based on various features such as runtime, genre, cast, and critic ratings. The pipeline demonstrates the end-to-end process, from data preprocessing to model evaluation and hyperparameter tuning, ensuring accurate predictions and robust performance.
+This project aims to build a machine learning model to predict the audience rating of movies based on various features. The pipeline demonstrates the end-to-end process, from data preprocessing to model evaluation and hyperparameter tuning, ensuring accurate predictions and robust performance.
 
+---
+### **List of Files in the Project**
+
+1. **Predicting_Audience_Rating.ipynb**  
+   - The main Jupyter notebook containing the entire pipeline for predicting audience ratings. It includes data preprocessing, exploratory data analysis (EDA), model training, evaluation, hyperparameter tuning, and final pipeline implementation.
+
+2. **Rotten_Tomatoes_Movies3.xls**  
+   - The raw dataset in `.xls` format containing movie information such as runtime, genre, cast, critic ratings, and audience ratings.
+
+3. **Rotten_tomatoes_Movies3.csv**  
+   - The converted version of the dataset in `.csv` format for easier handling and compatibility with data processing libraries. This file is generated during the initial steps of the notebook.
+
+These files are essential for running the project and reproducing the results.
 ---
 
 ## **Features**
