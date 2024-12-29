@@ -71,7 +71,7 @@ import seaborn as sns  # For creating more advanced and visually appealing plots
 from sklearn.preprocessing import StandardScaler, LabelEncoder  # For scaling data and encoding labels
 
 # Import libraries for model building and evaluation
-from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV, cross_val_score  # For splitting data and hyperparameter tuning
+from sklearn.model_selection import train_test_split, RandomizedSearchCV, cross_val_score  # For splitting data and hyperparameter tuning
 from sklearn.linear_model import LinearRegression  # For Linear Regression model
 from sklearn.tree import DecisionTreeRegressor  # For Decision Tree Regression model
 from sklearn.ensemble import RandomForestRegressor  # For Random Forest Regression model
