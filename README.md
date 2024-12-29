@@ -11,7 +11,7 @@ This project aims to build a model to predict the 'audience_rating' for movies u
 5. [Model Evaluation](#model-evaluation)
 6. [Conclusion](#conclusion)
 7. [Conclusion](#conclusion)
-8. [Tools, Technologies, and Libraries](#tools,-technologies,-and-libraries)
+8. [Project Requirements](#project-requirements)
 
 ## Data Preparation
 
@@ -60,7 +60,7 @@ To use this notebook:
 
 For any questions or improvements, please open an issue or submit a pull request.
 
-## Tools, Technologies, and Libraries
+## Project Requirements
 
 - **Python Version**: 3.10.0
 - **Libraries and Versions**:
